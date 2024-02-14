@@ -20,4 +20,15 @@ describe('Home', () => {
 
         expect(myElem).toBeInTheDocument()
     })
+
+    //Test to check if Home component has a heading element
+    it('should have a heading', () => {
+        render(<Home />)
+
+        const myElem = screen.getByRole('heading', {
+            name: 'Learn'
+        })
+
+        expect(myElem).toBeInTheDocument()
+    })
 })
